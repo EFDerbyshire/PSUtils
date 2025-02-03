@@ -18,17 +18,17 @@ function Get-ADUsers
 
         Valid options:
         - "DisplayName" : Search using legal names (John Smith).
-        - "LoginName" : Search using logon names (jsmith).
+        - "LoginName"   : Search using logon names (jsmith).
 
         .EXAMPLE
-        PS C:\>Get-PSUtilADUsers -Path "C:\Users\You\Documents\names.txt" -SearchType "DisplayName"
+        PS C:\> Get-PSUtilADUsers -Path "C:\Users\You\Documents\names.txt" -SearchType "DisplayName"
 
         Retrieves user details based on legal name search from given file (John Smith).
 
         .EXAMPLE
-        PS C:\>Get-PSUtilADUsers - Path "C:\Users\You\Documents\names.txt" -SearchType "LoginName"
+        PS C:\> Get-PSUtilADUsers -Path "C:\Users\You\Documents\names.txt" -SearchType "LoginName"
         
-        Retrieves user details based on login name search from given file (jsmith2).
+        Retrieves user details based on login name search from given file (jsmith).
     #>
 
     [cmdletbinding()]
