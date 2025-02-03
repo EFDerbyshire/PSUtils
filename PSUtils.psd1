@@ -22,7 +22,7 @@
     Copyright = '(c) 2025 Ellis Derbyshire. MIT Licensed.'
     
     # Description of the functionality provided by this module
-    Description = 'A Powershell module.'
+    Description = 'A collection of powershell utilities to automate various large and/or repetitive tasks.'
     
     # Minimum version of the Windows PowerShell engine required by this module
     # PowerShellVersion = ''
@@ -115,5 +115,4 @@
     
     # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
      DefaultCommandPrefix = 'PSUtil'
-    
     }
