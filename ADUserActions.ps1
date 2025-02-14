@@ -59,11 +59,12 @@ function Get-ADUsers
             { 
                 Write-Host "Beginning fuzzy search for user $Name. This may take some time!"
                 $Users = Get-ADUser -Filter * -Properties $SearchType | Where-Object { $_.$SearchType -match $Name}
-                if ($Users) { Write-Host "Found entries for $Name" } else { Write-Host "Could not find users with name $Name" }
+                if ($Users) { Write-Verbose "Found entries for $Name" } else { Write-Host "Could not find users with name $Name" -ForegroundColor Red }
             }
             else
             { 
                 $Users = Get-ADUser -Filter "$SearchType -like '$Name'" -Properties DisplayName
+                if ($Users) { Write-Verbose "Found entries for $Name" } else { Write-Host "Could not find users with name $Name" -ForegroundColor Red }
             }
             ForEach($User in $Users) 
             {
