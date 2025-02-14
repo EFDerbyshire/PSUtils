@@ -5,7 +5,7 @@ $version = $manifest.ModuleVersion
 # Change Powershell titlebar
 try 
 {
-    $host.UI.RawUI.WindowTitle="PSUtils $version"    
+    $host.UI.RawUI.WindowTitle="PSUtils v$version"    
 }
 catch {}
 
@@ -17,7 +17,7 @@ $logo = @"
  / ____/ /_/ / |/ |/ /  __/ /  (__  ) / / /  __/ / / /_/ / /_/ / (__  ) 
 /_/    \____/|__/|__/\___/_/  /____/_/ /_/\___/_/_/\____/\__/_/_/____/  
 
- v$version
+Powershell Utils v$version
 "@
 
 Write-Host $logo -ForeGroundColor Cyan
